@@ -40,7 +40,12 @@ int main()
     	system("cls");
     	gotoxy(a.x,a.y);
     	cout<<a.s;
-    	
+    	//xu ly cham bien
+    	if(a.x>=width-sl)
+    		a.tt=LEFT;
+    	else if (a.x<=0)
+    		a.tt=RIGHT;
+    		
     	if(kbhit())
     	{
     		char key=_getch();
