@@ -4,7 +4,8 @@
 using namespace std;
 
 
-//.........................Monhoc............................
+//------Monhoc------ 
+//cay nhi phan
 struct monhoc
 {
 	char mmh[10];	//ma mon hoc
@@ -22,7 +23,8 @@ struct NodeMH 		//node mon hoc
 typedef struct NodeMH *NODEPTR;
 NODEPTR tree= NULL;
 
-//.....................danh sach sinh vien....................
+//------danh sach sinh vien------
+//danh sach lien ket don
 struct sinhvien
 {
 	char msv[20]; 	//ma sinh vien
@@ -47,10 +49,11 @@ struct listSV
 };
 typedef struct listSV LISTSV;
 
-//.....................danh sach dang ki.......................
+//------danh sach dang ki------
+//danh sach lien ket don
 struct dsdk
 {
-	char msv[20];
+	char msv[20]; //ma sinh vien
 	float diem; 	//diem
 };
 
@@ -63,21 +66,37 @@ struct NodeDK
 typedef struct NodeDK NODEDK;
 struct listDK
 {
-	int m=-1;
+	int n=-1;
 	NODEDK *head, *tail;
 };
 typedef struct listDK LISTDK;
-//danh sach lop tin chi
-struct dsltc
+
+//------danh sach lop tin chi------
+//danh sach tuyen tinh la mang mot con tro. con tro tro toi danh sach sinh vien dang ki
+#define MAXLTC 100
+struct ltc
 {
 	int malop; 		//ma lop
+	char mmh[10];	//ma mon hoc
 	int nienkhoa;	// nien khoa
-	int hocki; 	// hoc ki
+	int hocki; 		// hoc ki
 	int nhom; 		//nhom
-	int sosv;	
+	int nsvmax;	
 };
-typedef struct dsltc dsLTC;
-struct DSLTC
+typedef struct ltc Ltc;
+struct	lTC
 {
-	dsltc info;
+	Ltc info;
+	LISTDK dssv;
 };
+typedef struct lTC LTC;
+typedef struct lTC* pLTC;
+
+struct dsLTC
+{
+	int n=-1;
+	pLTC DsLTC[MAXLTC];
+};
+typedef struct dsLTC DSLTC;
+
+
