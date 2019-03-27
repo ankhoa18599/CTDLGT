@@ -9,7 +9,7 @@ struct ltc
 	int hocki; 		// hoc ki
 	int nhom; 		//nhom
 	int nsvmax;
-	NODESV ptrdk = NULL;	
+	NODEDK ptrdk = NULL;	
 };
 typedef struct ltc Ltc;
 struct	dslop

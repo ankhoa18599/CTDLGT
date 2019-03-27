@@ -12,4 +12,4 @@ struct NodeDK
 	DSDK data;
 	struct NodeDK* nextDK;
 };
-typedef struct NodeDK NODEDK;
+typedef struct NodeDK *NODEDK;
