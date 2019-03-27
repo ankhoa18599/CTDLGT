@@ -17,9 +17,3 @@ struct NodeSV
 };
 
 typedef struct NodeSV NODESV;
-struct listSV
-{
-	int n = -1;
-	NODESV *Head, *Tail;
-};
-typedef struct listSV LISTSV;
