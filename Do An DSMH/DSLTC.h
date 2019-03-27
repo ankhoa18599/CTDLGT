@@ -8,24 +8,17 @@ struct ltc
 	int nienkhoa;	// nien khoa
 	int hocki; 		// hoc ki
 	int nhom; 		//nhom
-	int nsvmax;	
+	int nsvmax;
+	NODESV ptrdk = NULL;	
 };
 typedef struct ltc Ltc;
-struct	lTC
+struct	dslop
 {
-	Ltc info;
-	LISTDK dssv;
-};
-typedef struct lTC LTC;
-typedef struct lTC* pLTC;
-
-struct dsLTC
-{
-	int n=-1;
-	pLTC DsLTC[MAXLTC];
-};
-typedef struct dsLTC DSLTC;
-
+	int n;
+	Ltc nodeltc[MAXLTC];
+}
+typedef struct	dslop DSLOP;
+DSLOP DSLTC;
 
 
 
