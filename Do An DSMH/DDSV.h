@@ -16,4 +16,4 @@ struct NodeSV
 	struct NodeSV* nextSV;
 };
 
-typedef struct NodeSV NODESV;
+typedef struct NodeSV *NODESV;
