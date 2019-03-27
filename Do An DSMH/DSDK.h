@@ -13,9 +13,3 @@ struct NodeDK
 	struct NodeDK* nextDK;
 };
 typedef struct NodeDK NODEDK;
-struct listDK
-{
-	int n=-1;
-	NODEDK *head, *tail;
-};
-typedef struct listDK LISTDK;
